@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    width: 100vw;
+    
+    
+  }
+
+  .background-overlay {
+    background-color: rgba(216, 67, 67, 0.959); /* La transparence est définie ici avec une valeur alpha de 0.5 */
+	background-image: url(501987-marvel-comics.jpg);
+	background-color: rgba(255, 255, 255, 0.5);
+	color: #000000;
+	position: relative;
+	z-index: 1;
+    height: 100%;
+    width: 100%;
+    
+}
+
+.background-overlay::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(255, 255, 255, 0.5);
+	z-index: -1;
+}
+	
+
+
+
+  .titre {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .choix {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  #container {
+    max-width: 100%;
+    font-size: 1.2rem;
+    padding: 8px;
+  }
+
+  .hero-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .hero-description {
+    text-align: center;
+    margin-top: 20px;
+    max-width: 80%;
+    margin: 20px auto;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+  }
+
+  @media (max-width: 768px) {
+    .hero-description {
+      font-size: 1rem;
+      margin-top: 10px;
+    }
+  }
